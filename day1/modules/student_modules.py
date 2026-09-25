@@ -1,11 +1,20 @@
-from modules.result_calculator import calculate_percentage
+from result_calculator import calculate_percentage
 
 
-student_name = input("Enter student name: ")
+def input_student():
+    student_name = input("enter student name:")
+    marks_python = float(input("enter marks for python:"))
+    marks_math = float(input("enter marks for mathematics"))
+    marks_comm = float(input("enter marks for communication:"))
+    dict_student_info = {
+        "name":student_name,
+        "python_marks":marks_python,
+        "math_marks":marks_math,
+        "comm_marks":marks_comm,
+    }
+    #return student_name,marks_pythyon,marks_math,marks_comm
+    return dict_student_info
 
-marks_python = float(input("Enter Python marks: "))
-marks_math = float(input("Enter Mathematics marks: "))
-marks_comm = float(input("Enter Communication marks: "))
 
 # TODO:
 # Import the calculate_percentage function
@@ -15,6 +24,17 @@ marks_comm = float(input("Enter Communication marks: "))
 # Calculate the percentage using the imported function
 
 percentage = 0
-print("\n--- Result ---")
-print(f"Student: {student_name}")
-print(f"Percentage: {percentage}")
+
+
+
+if __name__ == "__main__":
+    print("\n == result --")
+    # name,python-m,math_m,comm_m = input_student()
+    student_info = input_student()
+    print(student_info)
+    print("student:",student_info["name"])
+    print("percentage", calculate_percentage(
+    student_info["python_marks"],
+    student_info["math_marks"],
+    student_info["comm_marks"]))
+
