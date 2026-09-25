@@ -16,7 +16,7 @@ def input_student():
 #TODO:
 def calculate_percentage(marks_python,marks_math,marks_comm):
     total = (marks_comm+marks_math+marks_python)
-    prcentage = (total/300)*100
+    percentage = (total/300)*100
     return percentage
 
 if __name__ == "__main__":
