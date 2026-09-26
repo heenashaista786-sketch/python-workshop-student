@@ -3,7 +3,7 @@ import json
 
 def save_students(students, filename):
     """Save students to a JSON file."""
-    # TODO: Convert students into dictionaries
+    # TODO: Convert students into diction
     # TODO: Save the data using json.dump()
     pass
 
